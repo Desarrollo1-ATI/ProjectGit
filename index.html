@@ -14,16 +14,53 @@
 		{
 			background-color: #BE4071FF;
 		}
+
 	</style>
 </head>
 <body>
-	<h2>Come on</h2>
-	<div class="hoverr" style=" ">
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item prueba1">
+        Prueba1
+      </a>
+
+      <a class="navbar-item prueba2">
+        Prueba2
+      </a>
+		<a class="navbar-item prueba3">
+        Prueba3
+      </a>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary msj">
+            <strong>Mensaje</strong>
+          </a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+	
+	<div class="hoverr" id="prueba1" style=" ">
+		<h2>Come on</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis asperiores, dolor, iste veritatis ea, aut nostrum ipsam recusandae at explicabo eaque porro id dolore sequi sint. Necessitatibus quod, deserunt iste.</p>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit similique a culpa, aliquam blanditiis officiis accusantium, repudiandae modi odio minima quae? In natus architecto rerum eaque perferendis, eveniet beatae autem.</p>
 	</div>
 	
-		<div class="control" style="width: 30%; color: ">
+		<div class="control" id="prueba2" style="width: 30%; color: ">
 			<div class="field">
 			  <p class="control has-icons-left has-icons-right">
 			  	<button class="button is-primary">Agregando botones</button>
@@ -56,7 +93,7 @@
 			</table>
 		</div>
 	
-	<div class="control" style="width: 20%;">
+	<div class="control" id="prueba3" style="width: 20%;">
 		
 		<div class="field">
 			
@@ -70,5 +107,30 @@
 		  </div>
 		</div>
 	</div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#prueba1").hide();
+			$("#prueba2").hide();
+			$("#prueba3").hide();
+			$(".msj").on('click', function(event) {
+				event.preventDefault();
+				alert("Hola a todos");
+			});
+			$(".prueba1").on('click', function(event) {
+				event.preventDefault();
+				$("#prueba1").toggle('slow');
+			});
+			$(".prueba2").on('click', function(event) {
+				event.preventDefault();
+				$("#prueba2").toggle('slow');
+			});
+			$(".prueba3").on('click', function(event) {
+				event.preventDefault();
+				$("#prueba3").toggle('slow');
+			});
+		});
+	</script>
 </body>
 </html>
